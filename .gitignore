@@ -4,3 +4,4 @@ dist
 *.log
 export-preview
 .castor.stub.php
+slides-export.pdf
