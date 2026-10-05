@@ -294,9 +294,9 @@ $builder
 </div>
 <div class="files">
 <span>Puis <mark>aropixel:make:crud</mark> génère :</span>
-<span><code>src/Controller/Admin/ArticleController.php</code><span class="muted">index (DataTable), new, edit, delete</span></span>
-<span><code>templates/admin/article/index.html.twig</code><span class="muted">liste</span></span>
-<span><code>templates/admin/article/form.html.twig</code><span class="muted">formulaire</span></span>
+<span><code>src/Controller/Admin/ArticleController.php</code></span>
+<span><code>templates/admin/article/index.html.twig</code></span>
+<span><code>templates/admin/article/form.html.twig</code></span>
 </div>
 </div>
 
