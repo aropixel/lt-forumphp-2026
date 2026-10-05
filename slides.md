@@ -136,7 +136,7 @@ class: tight compact
 <div class="cards cards-2">
   <div class="card">
     <span class="card-title">Ce n'est pas</span>
-    <span class="card-text"><strong>Un EasyAdmin</strong> : pas de configuration à écrire pour obtenir des écrans.</span>
+    <span class="card-text"><strong>Un EasyAdmin bis</strong> : vos écrans ne sortent pas d'une config, leur code est dans votre projet.</span>
     <span class="card-text"><strong>Une black box</strong> : rien à contourner quand vous sortez des rails.</span>
     <span class="card-text"><strong>Un CMS</strong> : aucun modèle de contenu imposé.</span>
   </div>
@@ -148,12 +148,8 @@ class: tight compact
   </div>
 </div>
 
-<div class="shot shot-strip"><img src="./assets/client-interfaces.jpg" alt="Dashboards de trois clients Aropixel : Garorock, Aux Portes de Bordeaux, V&A"></div>
-
-<p class="small muted">Garorock (festival) · Aux Portes de Bordeaux (immobilier) · V&A (architecture)</p>
-
 <!--
-Ce n'est pas un EasyAdmin bis : vous n'écrivez pas de configuration pour décrire vos écrans. Ce n'est pas une black box, et ce n'est pas un CMS.
+Ce n'est pas un EasyAdmin bis : EasyAdmin génère vos écrans à partir d'une config ; ici, le code des écrans est dans votre projet. Ce n'est pas une black box, et ce n'est pas un CMS.
 
 C'est une boîte à outils pour développeurs. Le code vit dans votre projet, dans votre Symfony : vos entités, vos FormTypes, vos controllers. Le bundle vous donne les services et les composants, et il s'efface.
 -->
@@ -222,7 +218,7 @@ La promesse de base, elle est toute simple.
 - Un template avec quatre form_row. 
 - Et le résultat : un select, un toggle, un upload avec médiathèque partagée et recadrage.
 
-Le layout et les bibliothèques sont prêtes. 
+Le layout et les bibliothèques sont prêts. 
 Aucune configuration en plus, aucun JavaScript à écrire.
 -->
 
@@ -278,7 +274,7 @@ speakers: [joel]
 class: tight
 ---
 
-# Agents, créez directement
+# Un prompt, un CRUD
 
 <div class="ask"><span class="ask-caret">&gt;</span>« Crée l'admin des articles : titre, couleur, éditeur riche, date de publication et tags. »</div>
 
@@ -307,13 +303,11 @@ $builder
 <p class="small muted">Les skills Claude Code, livrées avec le bundle, complètent colonnes, recherche et tri. Agents et devs : même toolbox.</p>
 
 <!--
-Et c'est là que ça devient intéressant avec les agents. Un prompt : "crée l'admin des articles, avec titre, couleur, éditeur riche, date et tags".
+Et c'est là que ça devient intéressant avec les agents. Un prompt : « crée l'admin des articles ».
 
-Comme tout est du Symfony ordinaire, l'agent écrit le FormType comme un dev. Puis il execute le make:crud maison qui génère le controller avec ses quatre méthodes, notre template de liste et celui du formulaire. 
+Comme tout est du Symfony ordinaire, l'agent écrit le FormType comme un dev, puis il exécute notre make:crud, qui génère le controller, la liste et le formulaire. Les skills livrées avec le bundle complètent colonnes, recherche et tri.
 
-Les skills livrées avec le bundle complètent colonnes, recherche et tri.
-
-Juste des skills, pas de couche en plus : les agents pilotent la même toolbox que nous. Ca va juste encore plus vite.
+Pas de couche en plus : les agents pilotent la même toolbox que nous. Ça va juste encore plus vite.
 -->
 
 ---
@@ -335,16 +329,22 @@ Un dernier mot sur PageBundle. C'est un page builder par blocs, avec du HTML pr�
 -->
 
 ---
-layout: statement
 section: 7:fin
 speakers: [joel]
 ---
+
+<div class="contact">
+<div class="contact-main">
 
 # Merci
 
 <p class="muted">github.com/aropixel · aropixel.com</p>
 
 <div class="logos"><img src="/logo-aropixel.svg" alt="Aropixel"></div>
+
+</div>
+<div class="shot"><img src="/qr-admin-bundle.svg" alt="QR code vers github.com/aropixel/admin-bundle" class="qr"></div>
+</div>
 
 <!--
 Voilà. Une toolbox éprouvée, dix ans de production, quatre bundles open source, et maintenant prête pour que les agents contribuent avec nous.
