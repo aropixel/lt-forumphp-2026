@@ -1,10 +1,10 @@
-# La boîte à outils qu'on n'a plus besoin de réinventer
+# La boîte à outils qu'on ne réinvente plus
 
 Lightning talk (5 minutes) pour le **Forum PHP 2026** — la suite de bundles Symfony
 d'Aropixel : une toolbox éprouvée, utilisée sur tous nos projets, et prête pour les
-agents IA. Propulsé par [Slidev](https://sli.dev), avec un thème custom aux couleurs
-d'[aropixel.com](https://aropixel.com) (couleur d'accent `#56f1c5`, Space Grotesk +
-Inter).
+agents IA. Propulsé par [Slidev](https://sli.dev), avec le thème « Terminal » de la
+conférence AFUP du même jour (`afup-conf-2026`, « La lucidité comme architecture »), pour
+que les deux présentations aient le même habillage.
 
 Pour lancer le diaporama :
 
@@ -26,9 +26,12 @@ npm run export
 
 - `slides.md` — tout le contenu. Les notes orateur sont entre `<!-- -->` sous chaque
   slide.
-- `aropixel/` — thème custom (calqué sur le principe du thème JoliCode utilisé pour les
-  confs AFUP) : couleurs, typographies et layouts (`cover`, `statement`) repris de la
-  charte aropixel.com.
+- `terminal/` — thème Terminal repris de `afup-conf-2026` : canvas 1920×1080,
+  JetBrains Mono, barre `[aropixel] <section>` en haut (frontmatter `section:` et
+  `speakers: [joel]` sur chaque slide). Layouts `cover`, `default`, `statement`
+  (`dark: true` pour le fond noir), classes `tight` (slides à image) et `compact`
+  (titre réduit). Les styles propres au LT (blocs de code, `.cards`, `.ask`, `.files`)
+  sont à la fin de `terminal/styles/layout.css`.
 - `assets/` — captures réelles de l'AdminBundle (catalogue de composants, color picker,
   édition de collection), réutilisées depuis `doc/assets/` du dépôt `admin-bundle`.
 - `public/logo-aropixel.svg` — logo, extrait du header d'aropixel.com.

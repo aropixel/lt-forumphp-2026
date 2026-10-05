@@ -1,0 +1,28 @@
+{
+  "name": "slidev-theme-aropixel-terminal",
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@slidev/types": "^51.4.0"
+  },
+  "//": "Thème « Terminal v2 », repris de la conférence AFUP « La lucidité comme architecture » (afup-conf-2026).",
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "canvasWidth": 1920,
+      "aspectRatio": "16/9",
+      "fonts": {
+        "sans": "JetBrains Mono",
+        "mono": "JetBrains Mono",
+        "weights": "400,500,700,800"
+      }
+    }
+  }
+}

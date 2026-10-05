@@ -1,25 +1,30 @@
 ---
-theme: ./aropixel
-layout: cover
-title: "La boîte à outils qu'on n'a plus besoin de réinventer"
+theme: ./terminal
+title: "La boîte à outils qu'on ne réinvente plus"
 info: "Lightning talk Forum PHP 2026 — la suite de bundles Symfony d'Aropixel : une toolbox éprouvée, utilisée sur tous nos projets, et prête pour les agents IA."
-class: text-left
+canvasWidth: 1920
+aspectRatio: 16/9
+fonts:
+  sans: JetBrains Mono
+  mono: JetBrains Mono
+  weights: '400,500,700,800'
 drawings:
   persist: false
 mdc: true
 selectable: true
+layout: cover
+section: 0:intro
+speakers: [joel]
 ---
 
-# La boîte à outils qu'on n'a plus besoin de réinventer
+# La boîte&nbsp;à&nbsp;outils qu'on ne réinvente plus
 
-Notre suite Symfony, éprouvée, open source, prête pour les agents {.subtitle}
+<p class="muted">Notre suite Symfony, éprouvée, open source, prête pour les agents</p>
 
-Aropixel
-
-Solutions Symfony, plateformes événementielles et services web durables, Bordeaux
+<div class="speakers-row"><span><Chip who="joel" />Aropixel · Bordeaux</span></div>
 
 <!--
-[Repère de répétition : lightning talk, 5 minutes chrono. Ne pas dépasser. Dix slides plus une optionnelle (page builder) à sauter si le chrono dépasse 4 min. make:crud n'est révélé que sur la slide agents.]
+[Repère de répétition : lightning talk, 5 minutes chrono. Ne pas dépasser. Onze slides plus une optionnelle (page builder) à sauter si le chrono dépasse 4 min. make:crud n'est révélé que sur la slide agents.]
 
 Bonjour à tous. Je suis Joel, développeur chez Aropixel, une agence à Bordeaux qui fait du Symfony depuis plus de dix ans.
 
@@ -28,20 +33,25 @@ Je vais vous parler de notre suite de bundles d'administration open source.
 
 ---
 layout: statement
+section: 1:constat
+speakers: [ joel ]
 ---
 
 # Un nouveau projet Symfony ?
 
-Un nouveau back-office à coder.
+<p class="muted">Un nouveau back-office à coder.</p>
 
 <!--
-Chaque projet qu'on livre a besoin d'un espace d'administration : gérer des contenus, des utilisateurs, des droits, des médias.
+Chaque projet qu'on livre a besoin d'un espace d'administration : gérer des contenus, des utilisateurs, des droits, des médias, et même des pages et des articles de blog.
 
 Et pendant longtemps, on a fait comme tout le monde : on recode un bout de back-office à chaque fois. Des formulaires, des CRUD, des uploads d'images, encore, et encore.
 -->
 
 ---
 layout: statement
+section: 1:constat
+speakers: [joel]
+dark: true
 ---
 
 # Chez nous, plus depuis longtemps.
@@ -53,51 +63,54 @@ On a extrait cette brique une bonne fois pour toutes, on l'a affinée projet apr
 -->
 
 ---
-
-<div class="kicker">Notre suite</div>
+section: 2:suite
+speakers: [joel]
+---
 
 # 4 bundles, une seule philosophie
 
-<div class="grid grid-cols-2 gap-4 mt-6">
-  <div class="aro-card">
-    <h4>Admin</h4>
-    <p>Le cœur : back-office léger et extensible, <code>make:crud</code>, et des layout de formulaires.</p>
+<div class="cards cards-2">
+  <div class="card">
+    <span class="card-title">Admin</span>
+    <span class="card-text">Le cœur : back-office léger et extensible, FormTypes et layouts de formulaires.</span>
   </div>
-  <div class="aro-card">
-    <h4>Pages</h4>
-    <p>Gestion de pages structurées, page builder, alternative légère aux CMS.</p>
+  <div class="card">
+    <span class="card-title">Pages</span>
+    <span class="card-text">Gestion de pages structurées, page builder, alternative légère aux CMS.</span>
   </div>
-  <div class="aro-card">
-    <h4>Blog</h4>
-    <p>Actualités et articles, intégrable à toute application Symfony existante.</p>
+  <div class="card">
+    <span class="card-title">Blog</span>
+    <span class="card-text">Actualités et articles, intégrable à toute application Symfony existante.</span>
   </div>
-  <div class="aro-card">
-    <h4>Menu</h4>
-    <p>Navigation en drag & drop, multi-niveaux.</p>
+  <div class="card">
+    <span class="card-title">Menu</span>
+    <span class="card-text">Navigation en drag & drop, multi-niveaux.</span>
   </div>
 </div>
 
-<p class="mt-6 text-sm opacity-70">Licence MIT · compatibles PHP 8.5 & Symfony 8 · maintenus en continu</p>
+<p class="small muted">Licence MIT · Symfony 6.4 à 8 · maintenus en continu</p>
 
 <!--
 Concrètement, c'est quatre bundles : 
-- Admin, qui est le cœur du pilotage, avec un générateur de CRUD, des FormTypes et leurs layouts prêts à l'emploi. 
+- Admin, qui est le cœur du pilotage, avec des FormTypes et leurs layouts prêts à l'emploi. 
 - Pages, pour du contenu structuré façon page builder. 
 - Blog, pour l'éditorial. 
 - Et Menu, pour la navigation en drag & drop.
 
-Tout est en licence MIT, compatible avec les dernières versions de PHP et Symfony, et surtout : c'est ce qu'on utilise en production, sur tous nos projets, donc c'est éprouvé.
+Tout est en licence MIT, compatible avec Symfony 6.4 à 8, et surtout : c'est ce qu'on utilise en production, sur tous nos projets, donc c'est éprouvé.
 -->
 
 ---
-
-<div class="kicker">À quoi ça ressemble</div>
+section: 2:suite
+speakers: [joel]
+class: tight
+---
 
 # Un back-office complet
 
-<img src="./assets/crud-generator.gif" class="mx-auto max-h-80 rounded-lg shadow" alt="Parcours dans un back-office Aropixel : liste, formulaire à onglets, médias">
+<div class="shot"><img src="./assets/crud-generator.gif" alt="Parcours dans un back-office Aropixel : liste, formulaire à onglets, médias"></div>
 
-<p class="mt-3 text-sm opacity-75">Listing avec tri et recherche · formulaires à onglets · médias et recadrage · utilisateurs et rôles.</p>
+<p class="small muted">Tableau de bord · listing avec tri et recherche · formulaires à onglets · éditeur riche · médiathèque.</p>
 
 <!--
 Voilà à quoi ça ressemble. 
@@ -113,33 +126,31 @@ Rien d'exotique : c'est un back-office propre et extensible.
 -->
 
 ---
-
-<div class="kicker">Pas une black box</div>
+section: 2:suite
+speakers: [joel]
+class: tight compact
+---
 
 # Ce que c'est, ce que ce n'est pas
 
-<div class="grid grid-cols-2 gap-4 mt-4">
-  <div class="aro-card">
-    <h4>Ce n'est pas</h4>
-    <ul class="text-sm mt-2 space-y-1">
-      <li><strong>Un EasyAdmin</strong> : pas de configuration à écrire pour obtenir des écrans.</li>
-      <li><strong>Une black box</strong> : rien à contourner quand vous sortez des rails.</li>
-      <li><strong>Un CMS</strong> : aucun modèle de contenu imposé.</li>
-    </ul>
+<div class="cards cards-2">
+  <div class="card">
+    <span class="card-title">Ce n'est pas</span>
+    <span class="card-text"><strong>Un EasyAdmin</strong> : pas de configuration à écrire pour obtenir des écrans.</span>
+    <span class="card-text"><strong>Une black box</strong> : rien à contourner quand vous sortez des rails.</span>
+    <span class="card-text"><strong>Un CMS</strong> : aucun modèle de contenu imposé.</span>
   </div>
-  <div class="aro-card">
-    <h4>C'est</h4>
-    <ul class="text-sm mt-2 space-y-1">
-      <li><strong>Une boîte à outils</strong> pour développeurs Symfony.</li>
-      <li><strong>Du code qui vit dans votre projet</strong> : vos entités, vos FormTypes, vos controllers.</li>
-      <li><strong>Une fondation éprouvée</strong> : dix ans, tous nos projets.</li>
-    </ul>
+  <div class="card">
+    <span class="card-title">C'est</span>
+    <span class="card-text"><strong>Une boîte à outils</strong> pour développeurs Symfony.</span>
+    <span class="card-text"><strong>Du code qui vit dans votre projet</strong> : vos entités, vos FormTypes, vos controllers.</span>
+    <span class="card-text"><strong>Une fondation éprouvée</strong> : dix ans, tous nos projets.</span>
   </div>
 </div>
 
-<img src="./assets/client-interfaces.jpg" class="mx-auto mt-5 max-h-24 object-contain rounded-lg shadow opacity-90" alt="Dashboards de trois clients Aropixel : Garorock, Aux Portes de Bordeaux, V&A">
+<div class="shot shot-strip"><img src="./assets/client-interfaces.jpg" alt="Dashboards de trois clients Aropixel : Garorock, Aux Portes de Bordeaux, V&A"></div>
 
-<p class="mt-2 text-xs opacity-60 text-center">Garorock (festival) · Aux Portes de Bordeaux (immobilier) · V&A (architecture)</p>
+<p class="small muted">Garorock (festival) · Aux Portes de Bordeaux (immobilier) · V&A (architecture)</p>
 
 <!--
 Ce n'est pas un EasyAdmin bis : vous n'écrivez pas de configuration pour décrire vos écrans. Ce n'est pas une black box, et ce n'est pas un CMS.
@@ -148,43 +159,34 @@ C'est une boîte à outils pour développeurs. Le code vit dans votre projet, da
 -->
 
 ---
-
-<div class="kicker">Bootstrap rapide · castor-starter</div>
+section: 3:démarrer
+speakers: [joel]
+---
 
 # Un projet en une commande
 
 ```bash
-castor-starter aropixel:new:admin mon-projet --all
+aropixel-starter new:admin mon-projet --all
 ```
 
-<p class="mt-2 opacity-70">Docker Starter de JoliCode · Varnish · Mailpit · bundles à la carte · déploiement Clever Cloud · skills Claude Code — tout prêt.</p>
-
-<v-click>
-
-```bash
-castor-starter aropixel:contrib:admin ma-contrib
-```
-
-<p class="mt-2 opacity-70">Même chose pour contribuer à la suite : fork, sandbox Symfony, bundle en symlink — prêt en une commande.</p>
-
-</v-click>
+<p class="small muted">Docker Starter de JoliCode · Varnish · Mailpit · bundles à la carte · déploiement Clever Cloud · skills Claude Code — tout prêt.</p>
 
 <!--
-Pour pouvoir démarrer un projet en quelques secondes, on a mis en place castor-starter, un runner de tâches Castor. 
+Pour pouvoir démarrer un projet en quelques secondes, on a mis en place aropixel-starter, un runner de tâches Castor. 
 
 En une commande, vous avez un projet Symfony complet : le Docker Starter de JoliCode, le bundle Admin installé avec un compte administrateur, les bundles Page, Blog et Menu à la carte, et le déploiement Clever Cloud déjà configuré.
-
-Et si on doit contribuer à la suite elle-même, même chose : une commande fork le bundle, monte une sandbox Symfony et l'installe en symlink. Chaque modification est visible immédiatement, sans composer update.
 -->
 
 ---
-
-<div class="kicker">La promesse</div>
+section: 4:formtypes
+speakers: [joel]
+class: tight
+---
 
 # Des widgets en quelques lignes
 
-<div class="grid grid-cols-5 gap-4 text-sm">
-<div class="col-span-3">
+<div class="cols-2 code-small">
+<div>
 
 ```php
 $builder
@@ -197,7 +199,7 @@ $builder
 ```
 
 </div>
-<div class="col-span-2">
+<div>
 
 ```twig
 {{ form_row(form.title) }}
@@ -209,9 +211,9 @@ $builder
 </div>
 </div>
 
-<img src="./assets/form-widgets-example.png" class="mx-auto mt-3 max-h-36 rounded-lg shadow" alt="Le formulaire rendu : titre, catégorie, toggle publié, image de couverture avec upload">
+<div class="shot shot-small"><img src="./assets/form-widgets-example.png" alt="Le formulaire rendu : titre, catégorie, toggle publié, image de couverture avec upload"></div>
 
-<p class="mt-2 text-sm opacity-75">Zéro configuration, zéro JavaScript à écrire.</p>
+<p>Zéro configuration, <mark>zéro JavaScript à écrire.</mark></p>
 
 <!--
 La promesse de base, elle est toute simple. 
@@ -225,69 +227,63 @@ Aucune configuration en plus, aucun JavaScript à écrire.
 -->
 
 ---
-
-<div class="kicker">Embarqués dans le bundle</div>
+section: 4:formtypes
+speakers: [joel]
+class: tight
+---
 
 # 19 FormTypes prêts à l'emploi
 
-<div class="grid grid-cols-3 gap-4 mt-4 text-xs">
-  <div class="aro-card">
-    <h4>Médias</h4>
-    <ul class="mt-2 space-y-1">
+<div class="cards cards-3">
+  <div class="card">
+    <span class="card-title">Médias</span>
+    <ul>
       <li><code>ImageType</code> upload, médiathèque, recadrage</li>
       <li><code>GalleryType</code> images triables</li>
-      <li><code>FileType</code> fichier unique</li>
-      <li><code>GalleryType</code> collection de fichiers</li>
       <li><code>VideoType</code> embed vidéo avec aperçu</li>
+      <li>…</li>
     </ul>
   </div>
-  <div class="aro-card">
-    <h4>Données</h4>
-    <ul class="mt-2 space-y-1">
-      <li><code>Select2Type</code> select avec recherche AJAX</li>
-      <li><code>FilterableEntityType</code> une entité</li>
-      <li><code>FilterableEntitiesType</code> plusieurs entités</li>
-      <li><code>EntityHiddenType</code> · <code>CollectionHiddenType</code></li>
+  <div class="card">
+    <span class="card-title">Données</span>
+    <ul>
+      <li><code>Select2Type</code> recherche AJAX</li>
       <li><code>CollectionType</code> lignes triables en drag & drop</li>
-      <li><code>TranslatableType</code> · <code>SyliusTranslatableType</code></li>
+      <li><code>TranslatableType</code> champs traduisibles</li>
+      <li>…</li>
     </ul>
   </div>
-  <div class="aro-card">
-    <h4>Saisie</h4>
-    <ul class="mt-2 space-y-1">
-      <li><code>EditorType</code> éditeur riche QuillJS, images intégrées</li>
-      <li><code>DateTimeType</code> · <code>DateType</code> · <code>TimeType</code> avec pickers</li>
+  <div class="card">
+    <span class="card-title">Saisie</span>
+    <ul>
+      <li><code>EditorType</code> éditeur riche QuillJS</li>
+      <li><code>DateTimeType</code> avec pickers</li>
       <li><code>ColorType</code> color picker</li>
-      <li><code>ToggleSwitchType</code> interrupteur</li>
+      <li>…</li>
     </ul>
   </div>
 </div>
 
-<p class="mt-4 text-sm opacity-75">Chacun a son bloc Twig, surchargeable dans votre form theme.</p>
+<p class="small muted">Chacun a son bloc Twig, surchargeable dans votre form theme.</p>
 
 <!--
-Le bundle en embarque dix-neuf FormTypes, documentés, en plus de FormTypes Symfony designés. 
-
-- Les médias : images, galeries, fichiers, vidéo. 
-- Les données : Select2 avec recherche AJAX, collections triables, champs traduisibles. 
-- La saisie : éditeur, dates, couleur, toggle.
+Le bundle en embarque dix-neuf, documentés. Quelques exemples : l'image avec médiathèque et recadrage, la galerie triable, le select avec recherche AJAX, les collections en drag & drop, l'éditeur riche.
 
 Chaque type a son bloc Twig. Si le rendu ne vous convient pas, vous le surchargez dans votre form theme, comme d'habitude.
 -->
 
 ---
-
-<div class="kicker">Prête pour les agents</div>
+section: 5:agents
+speakers: [joel]
+class: tight
+---
 
 # Agents, créez directement
 
-<div class="aro-prompt">
-<span class="aro-prompt-label">« Crée l'admin des articles : titre, couleur, éditeur riche, date de publication et tags. »</span>
+<div class="ask"><span class="ask-caret">&gt;</span>« Crée l'admin des articles : titre, couleur, éditeur riche, date de publication et tags. »</div>
 
-</div>
-
-<div class="grid grid-cols-2 gap-5 mt-3">
-<div class="slidev-code-small">
+<div class="cols-2 code-small">
+<div>
 
 ```php
 // src/Form/ArticleType.php
@@ -300,38 +296,37 @@ $builder
 ```
 
 </div>
-<div class="aro-files">
-
-Puis `aropixel:make:crud` génère :
-
-- `src/Controller/Admin/ArticleController.php` — index (DataTable), new, edit, delete
-- `templates/admin/article/index.html.twig` — liste
-- `templates/admin/article/form.html.twig` — formulaire
-
+<div class="files">
+<span>Puis <mark>aropixel:make:crud</mark> génère :</span>
+<span><code>src/Controller/Admin/ArticleController.php</code><span class="muted">index (DataTable), new, edit, delete</span></span>
+<span><code>templates/admin/article/index.html.twig</code><span class="muted">liste</span></span>
+<span><code>templates/admin/article/form.html.twig</code><span class="muted">formulaire</span></span>
 </div>
 </div>
 
-<div class="text-sm opacity-75 mt-3">La skill Claude Code, livrée par castor-starter, complète colonnes, recherche et tri. Agents et devs : même toolbox.</div>
+<p class="small muted">Les skills Claude Code, livrées avec le bundle, complètent colonnes, recherche et tri. Agents et devs : même toolbox.</p>
 
 <!--
 Et c'est là que ça devient intéressant avec les agents. Un prompt : "crée l'admin des articles, avec titre, couleur, éditeur riche, date et tags".
 
 Comme tout est du Symfony ordinaire, l'agent écrit le FormType comme un dev. Puis il execute le make:crud maison qui génère le controller avec ses quatre méthodes, notre template de liste et celui du formulaire. 
 
-La skill livrée par castor-starter complète colonnes, recherche et tri.
+Les skills livrées avec le bundle complètent colonnes, recherche et tri.
 
-Juste une skill, pas de couche en plus : les agents pilotent la même toolbox que nous. Ca va juste encore plus vite.
+Juste des skills, pas de couche en plus : les agents pilotent la même toolbox que nous. Ca va juste encore plus vite.
 -->
 
 ---
-
-<div class="kicker">S'il reste du temps</div>
+section: 6:bonus
+speakers: [joel]
+class: tight
+---
 
 # PageBundle : le page builder
 
-<img src="./assets/page-builder-preview.gif" class="mx-auto max-h-80 rounded-lg shadow" alt="Le page builder visuel de PageBundle">
+<div class="shot"><img src="./assets/page-builder-preview.gif" alt="Le page builder visuel de PageBundle"></div>
 
-<p class="mt-3 text-sm opacity-75">Blocs visuels · HTML pré-rendu · pages fixes · champs SEO. Une alternative légère au CMS.</p>
+<p class="small muted">Blocs visuels · HTML pré-rendu · pages fixes · champs SEO. Une alternative légère au CMS.</p>
 
 <!--
 [Optionnelle : à sauter si le chrono dépasse 4 min en arrivant ici.]
@@ -341,11 +336,15 @@ Un dernier mot sur PageBundle. C'est un page builder par blocs, avec du HTML pr�
 
 ---
 layout: statement
+section: 7:fin
+speakers: [joel]
 ---
 
 # Merci
 
-**github.com/aropixel** · aropixel.com
+<p class="muted">github.com/aropixel · aropixel.com</p>
+
+<div class="logos"><img src="/logo-aropixel.svg" alt="Aropixel"></div>
 
 <!--
 Voilà. Une toolbox éprouvée, dix ans de production, quatre bundles open source, et maintenant prête pour que les agents contribuent avec nous.
